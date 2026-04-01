@@ -140,8 +140,10 @@ body {
 }
 
 .products {
-  margin-top: 35px;
-  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* 👈 ISSO RESOLVE TUDO */
+  margin-top: 20px;
 }
 
 .text {
