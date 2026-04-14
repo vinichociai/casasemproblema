@@ -9,7 +9,17 @@ function renderProducts(list) {
   list.forEach((product) => {
     const card = document.createElement("a");
     card.className = "product";
-    card.href = product.page;
+
+    // 🔥 PRIORIDADE: link > page
+    const url = product.link ? product.link : product.page;
+
+    card.href = url;
+
+    // 🔥 Se for link externo, abre fora (ajuda no TikTok)
+    if (product.link) {
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
+    }
 
     card.innerHTML = `
       <img src="${product.image}">

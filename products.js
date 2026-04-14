@@ -1,9 +1,9 @@
 const productsData = [
   {
-    name: "💧 Gel Furo Limpo Com Desconto",
-    image: "./assets/gel.png",
-    page: "gel.html"
-  },
+  name: "💧 Gel Furo Limpo Com Desconto",
+  image: "./assets/gel.png",
+  link: "https://www.mercadolivre.com.br/gel-para-limpar-os-furos-do-chuveiro-e-mancha-do-box/up/MLBU3641282293"
+}, 
   {
     name: "🔥 Carregador Portátil Power Bank 10000mAh",
     image: "./assets/carregador.png",
