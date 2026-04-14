@@ -1,25 +1,39 @@
 const input = document.getElementById("searchInput");
-const products = document.querySelectorAll(".product");
+const container = document.getElementById("productsContainer");
 const noResults = document.getElementById("noResults");
 
+// 🔥 Renderizar produtos
+function renderProducts(list) {
+  container.innerHTML = "";
+
+  list.forEach((product) => {
+    const card = document.createElement("a");
+    card.className = "product";
+    card.href = product.page;
+
+    card.innerHTML = `
+      <img src="${product.image}">
+      <div class="text">${product.name}</div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
+// Inicial
+renderProducts(productsData);
+
+// 🔍 Busca
 input.addEventListener("keyup", function () {
   const value = this.value.toLowerCase().trim();
 
-  let found = false;
+  const filtered = productsData.filter((product) =>
+    product.name.toLowerCase().includes(value)
+  );
 
-  products.forEach((product) => {
-    const text = product.innerText.toLowerCase();
+  renderProducts(filtered);
 
-    if (text.includes(value)) {
-      product.style.display = "flex";
-      found = true;
-    } else {
-      product.style.display = "none";
-    }
-  });
-
-  // Se não encontrou nada
-  if (!found && value !== "") {
+  if (filtered.length === 0 && value !== "") {
     noResults.style.display = "block";
   } else {
     noResults.style.display = "none";
