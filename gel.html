@@ -3,43 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecionando...</title>
+  <title>🔥 Oferta Limitada</title>
+
+  <link rel="icon" href="./assets/logo.png" />
 
   <style>
     body {
+      margin: 0;
+      font-family: Arial;
       background: #0f172a;
       color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial;
       text-align: center;
     }
-    a {
-      color: #38bdf8;
+
+    .top {
+      background: #ef4444;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    img {
+      width: 180px;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #22c55e;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .btn {
       display: block;
+      background: #22c55e;
+      color: white;
+      padding: 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
       margin-top: 20px;
+      font-size: 16px;
+    }
+
+    .btn:hover {
+      background: #16a34a;
+    }
+
+    .reviews {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #facc15;
+    }
+
+    .urgency {
+      margin-top: 15px;
+      color: #f87171;
+      font-size: 13px;
+    }
+
+    .proof {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #94a3b8;
     }
   </style>
 </head>
 
 <body>
 
-  <div>
-    <h2>🔄 Abrindo produto...</h2>
-    <p>Se não abrir automaticamente, clique abaixo:</p>
-
-    <a href="https://meli.la/1VGfXpe">
-      👉 Abrir produto
-    </a>
+  <div class="top">
+    🔥 MAIS DE 1.200 VENDIDOS ESSA SEMANA
   </div>
 
-  <script>
-    setTimeout(() => {
-      window.location.href = "https://meli.la/1VGfXpe";
-    }, 800);
-  </script>
+  <div class="container">
+
+    <h1>💧 Gel Furo Limpo</h1>
+
+    <p>Recupere a pressão do seu chuveiro em minutos 🚿</p>
+
+    <img src="./assets/gel.png">
+
+    <div class="old-price">De R$ 49,90</div>
+    <div class="price">Por apenas R$ 29,90</div>
+
+    <a href="https://meli.la/1VGfXpe" target="_blank" class="btn">
+      🚀 COMPRAR AGORA COM DESCONTO
+    </a>
+
+    <div class="reviews">
+      ⭐⭐⭐⭐⭐ +3.000 avaliações positivas
+    </div>
+
+    <div class="urgency">
+      ⚠️ Últimas unidades disponíveis
+    </div>
+
+    <div class="proof">
+      👥 87 pessoas estão vendo este produto agora
+    </div>
+
+  </div>
 
 </body>
 </html>
